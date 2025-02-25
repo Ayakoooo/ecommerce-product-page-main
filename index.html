@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="nav-header">
+          <button
+            aria-label="Open Menu"
+            id="open-menu"
+            aria-expanded="false"
+            aria-controls="nav-mobile"
+          >
+            <img
+              src="./assets/images/icon-menu.svg"
+              alt="Menu Icon"
+              class="nav-menu"
+            />
+          </button>
+          <a href="#" class="nav-logo" aria-label="Homepage">
+            <img src="./assets/images/logo.svg" alt="Company Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <dialog class="nav-mobile" id="nav-mobile">
+          <button aria-label="Close Menu" id="close-menu">
+            <img
+              src="./assets/images/icon-close.svg"
+              alt="Close Icon"
+              class="nav-close"
+            />
+          </button>
+          <ul class="nav-links-mobile">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </dialog>
+
+        <div class="nav-panel">
+          <button
+            aria-label="View Cart"
+            popovertarget="nav-cart"
+            class="nav-cart-icon"
+          >
+            <img
+              src="./assets/images/icon-cart.svg"
+              alt="Cart Icon"
+              id="cart-icon"
+            />
+          </button>
+          <div class="nav-profile">
+            <img src="./assets/images/image-avatar.png" alt="User Avatar" />
+          </div>
+        </div>
+      </nav>
+      <dialog class="nav-cart" id="nav-cart" popover>
+        <div class="cart-header">
+          <p>Cart</p>
+        </div>
+        <div class="cart-line"></div>
+        <div class="cart-body">
+          <div class="cart-item">
+            <img
+              src="./assets/images/image-product-1-thumbnail.jpg"
+              alt="Product Thumbnail"
+              class="cart-thumbnail"
+            />
+            <div class="cart-details">
+              <p class="cart-name">Fall Limited Edition Sneakers</p>
+              <div class="cart-price">
+                <p class="standard-price">$125.00 x</p>
+                <p class="quantity">3</p>
+                <p class="total-price">$375.00</p>
+              </div>
+            </div>
+            <div class="cart-actions">
+              <button class="cart-remove">
+                <img
+                  src="./assets/images/icon-delete.svg"
+                  alt="Delete Icon"
+                  class="cart-delete"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="cart-checkout">
+            <button class="button-checkout btn">Checkout</button>
+          </div>
+        </div>
+      </dialog>
+    </header>
+
+    <main>
+      <section class="product-preview">
+        <div class="product-gallery">
+          <div class="gallery-images">
+            <button aria-label="Previous Image" class="prev">
+              <img
+                src="./assets/images/icon-previous.svg"
+                alt="Previous Image"
+                class="gallery-previous"
+              />
+            </button>
+            <button aria-label="Next Image" class="next">
+              <img
+                src="./assets/images/icon-next.svg"
+                alt="Next Image"
+                class="gallery-next"
+              />
+            </button>
+            <img
+              src="./assets/images/image-product-1.jpg"
+              alt="Product Image"
+              class="gallery-image"
+            />
+            <img
+              src="./assets/images/image-product-2.jpg"
+              alt="Product Image"
+              class="gallery-image"
+            />
+            <img
+              src="./assets/images/image-product-3.jpg"
+              alt="Product Image"
+              class="gallery-image"
+            />
+            <img
+              src="./assets/images/image-product-4.jpg"
+              alt="Product Image"
+              class="gallery-image"
+            />
+          </div>
+          <div class="gallery-thumbnails">
+            <img
+              src="./assets/images/image-product-1-thumbnail.jpg"
+              alt="Product Thumbnail"
+              class="gallery-thumbnail"
+            />
+            <img
+              src="./assets/images/image-product-2-thumbnail.jpg"
+              alt="Product Thumbnail"
+              class="gallery-thumbnail"
+            />
+            <img
+              src="./assets/images/image-product-3-thumbnail.jpg"
+              alt="Product Thumbnail"
+              class="gallery-thumbnail"
+            />
+            <img
+              src="./assets/images/image-product-4-thumbnail.jpg"
+              alt="Product Thumbnail"
+              class="gallery-thumbnail"
+            />
+          </div>
+        </div>
+        <div class="product-details">
+          <div class="product-name">
+            <p class="product-brand">Sneaker Company</p>
+            <p class="product-title">Fall Limited Edition Sneakers</p>
+          </div>
+          <p class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="product-price">
+            <div class="product-new-price">
+              <p>$125.00</p>
+              <span class="product-discount-price">50%</span>
+            </div>
+            <p class="product-old-price">$250.00</p>
+          </div>
+          <div class="product-actions">
+            <div class="product-quantity">
+              <button class="quantity-minus">
+                <img src="./assets/images/icon-minus.svg" alt="" />
+              </button>
+              <input
+                type="number"
+                name="quantity"
+                id="product-quantity"
+                min="0"
+                max="10"
+                value="0"
+                step="1"
+              />
+              <button class="quantity-plus">
+                <img src="./assets/images/icon-plus.svg" alt="" />
+              </button>
+            </div>
+            <button class="product-button btn">
+              <img src="./assets/images/icon-cart.svg" alt="">
+              <p>Add to Cart</p>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const openMenu = document.getElementById("open-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const navMobile = document.getElementById("nav-mobile");
+
+      openMenu.addEventListener("click", () => {
+        navMobile.showModal();
+        openMenu.setAttribute("aria-expanded", true);
+      });
+
+      closeMenu.addEventListener("click", () => {
+        navMobile.close();
+        openMenu.setAttribute("aria-expanded", false);
+      });
+
+      navMobile.addEventListener("click", (event) => {
+        if (event.target === navMobile) {
+          navMobile.close();
+          openMenu.setAttribute("aria-expanded", false);
+        }
+      });
+    </script>
+  </body>
+</html>
