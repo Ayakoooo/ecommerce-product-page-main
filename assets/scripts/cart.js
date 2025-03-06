@@ -4,6 +4,7 @@ const plusBtn = document.querySelector(".plus");
 const addBtn = document.querySelector(".actions-cta");
 const cartBody = document.querySelector(".cart-body");
 const cartCheckout = document.querySelector(".cart-checkout");
+const newPrice = document.querySelector(".new-price");
 
 let quantity = 0;
 let cartIndex = 0;
@@ -14,6 +15,12 @@ function updateQuantity() {
     quantity = Math.max(0, quantity - 1);
   } else {
     quantity = quantity >= 5 ? 5 : quantity + 1;
+  }
+
+  if (quantity <= 0) {
+    newPrice.textContent = `$125.00`;
+  } else {
+    newPrice.textContent = `$${(standardPrice * quantity).toFixed(2)}`;
   }
 
   quantityValue.textContent = quantity;
@@ -31,6 +38,7 @@ function updateCart() {
   if (quantity == 0) {
     emptyCart();
   } else {
+    newPrice.textContent = `$${(standardPrice * quantity).toFixed(2)}`;
     cartBody.classList.remove("empty");
     cartBody.innerHTML = `
         <div class="cart-item">
