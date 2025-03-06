@@ -1,26 +1,23 @@
-# Frontend Mentor - E-commerce product page solution
+# Frontend Mentor - E-Commerce Product Page (Solution)
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+![Main page](./assets/highlights/page.png)
 
-## Table of contents
+<details>
+<summary>Table of Contents</summary>
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshots](#screenshots)
-  - [Links](#links)
+  - [The challenge](#challenge-description)
+  - [Screenshots](#highlight-screenshots)
 - [My process](#my-process)
-  - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+  </details>
 
-## Overview
+### Challenge Description
 
-### The challenge
+This is a solution to the [E-Commerce Product Page (Challenge) - Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Users should be able to:
+Users should be able to
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
@@ -29,69 +26,40 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-### Screenshots
+### Highlight Screenshots
 
-Here are some highlights of my solution:
+Here are some parts of the code I'm really proud of
 
-![Highlight 1](./assets/highlights/highlight1.jpg)
-![Highlight 2](./assets/highlights/highlight2.jpg)
-![Highlight 3](./assets/highlights/highlight3.jpg)
+![Highlight 1](./assets/highlights/mobile-gallery-code.png)
+![Highlight 2](./assets/highlights/desktop-gallery-code.png)
 
-### Links
+### My Process
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
-
-### Built with
-
+- Mobile-first workflow
 - Semantic HTML5 markup
 - CSS custom properties
+- JavaScript
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-### What I learned
+### What I Learned
 
-During this project, I learned how to effectively use React and Next.js to build a dynamic and responsive e-commerce product page. Here are some code snippets that I am particularly proud of:
+During this project, I finally got to use most of my CSS and JavaScript skills. It made me realize how much better I’ve gotten at problem-solving on my own - from using the `:not()` selector and nesting in CSS to getting creative with template strings.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+&:hover :not(.active-thumbnail) {
+  opacity: 0.5;
 }
 ```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+lightboxNext.addEventListener("click", () => {
+  if (index < lightboxThumbnails.length) {
+    index++;
+    setPreviewImage(`./assets/images/image-product-${index}.jpg`);
+  }
+});
 ```
 
-### Continued development
+### Continued Development
 
-In future projects, I plan to focus on improving my skills in the following areas:
-
-- Advanced React patterns
-- Performance optimization
-- Accessibility best practices
-
-### Useful resources
-
-- [React Documentation](https://reactjs.org/docs/getting-started.html) - This helped me understand the core concepts of React.
-- [Next.js Documentation](https://nextjs.org/docs) - This is an amazing resource for learning Next.js.
-
-## Author
-
-- Website - [Your Name](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-## Acknowledgments
-
-I would like to thank the Frontend Mentor community for their support and feedback throughout this project.
+In the future, I plan to rebuild that website using more advanced and modern frameworks like **React**.
