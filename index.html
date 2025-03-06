@@ -79,7 +79,7 @@
           <p>Cart</p>
         </div>
         <div class="cart-line"></div>
-        <div class="cart-body">
+        <div class="cart-body empty">
           <div class="cart-item">
             <img
               src="./assets/images/image-product-1-thumbnail.jpg"
@@ -90,12 +90,12 @@
               <p class="cart-name">Fall Limited Edition Sneakers</p>
               <div class="cart-price">
                 <p class="standard-price">$125.00 x</p>
-                <p class="quantity">3</p>
+                <p class="cart-quantity">3</p>
                 <p class="total-price">$375.00</p>
               </div>
             </div>
             <div class="cart-actions">
-              <button class="cart-remove">
+              <button class="cart-remove" id="remove">
                 <img
                   src="./assets/images/icon-delete.svg"
                   alt="Delete Icon"
@@ -111,48 +111,89 @@
       </dialog>
     </header>
 
+    <div class="gallery-lightbox" id="gallery-lightbox">
+      <div class="lightbox-container">
+        <button class="close-lightbox">
+          <img
+            src="./assets/images/icon-close.svg"
+            alt="Close lightbox"
+            aria-label="Close lightbox"
+          />
+        </button>
+        <div class="lightbox-content">
+          <button class="prev">
+            <img
+              src="./assets/images/icon-previous.svg"
+              alt="Previous image"
+              aria-label="Previous image"
+            />
+          </button>
+          <button class="next">
+            <img
+              src="./assets/images/icon-next.svg"
+              alt="Next image"
+              aria-label="Next image"
+            />
+          </button>
+          <img
+            src="./assets/images/image-product-1.jpg"
+            alt=""
+            class="lightbox-content-preview-image"
+          />
+        </div>
+        <div class="lightbox-thumbnails-container">
+          <div class="lightbox-thumbnail active-lightbox-thumbnail">
+            <img src="./assets/images/image-product-1-thumbnail.jpg" alt="" />
+          </div>
+          <div class="lightbox-thumbnail">
+            <img src="./assets/images/image-product-2-thumbnail.jpg" alt="" />
+          </div>
+          <div class="lightbox-thumbnail">
+            <img src="./assets/images/image-product-3-thumbnail.jpg" alt="" />
+          </div>
+          <div class="lightbox-thumbnail">
+            <img src="./assets/images/image-product-4-thumbnail.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <main>
-      <section class="product-preview">
-        <div class="product-gallery">
-          <div class="gallery-preview">
-            <button class="gallery-button left">
-              <img
-                src="./assets/images/icon-previous.svg"
-                alt=""
-                id="gallery-image"
-              />
+      <section class="product-page">
+        <div class="gallery-container">
+          <div class="image-container">
+            <button class="next-image">
+              <img src="./assets/images/icon-next.svg" alt="" />
             </button>
             <img
               src="./assets/images/image-product-1.jpg"
-              alt=""
-              id="gallery-image"
+              alt="Shoes"
+              class="preview-image"
             />
-            <button class="gallery-button right">
-              <img src="./assets/images/icon-next.svg" alt="" />
+            <button class="prev-image">
+              <img src="./assets/images/icon-previous.svg" alt="" />
             </button>
           </div>
-          <div class="gallery-thumbnails">
-            <img
-              src="./assets/images/image-product-1-thumbnail.jpg"
-              alt=""
-              class="thumbnail"
-            />
-            <img
-              src="./assets/images/image-product-2-thumbnail.jpg"
-              alt=""
-              class="thumbnail"
-            />
-            <img
-              src="./assets/images/image-product-3-thumbnail.jpg"
-              alt=""
-              class="thumbnail"
-            />
+          <div class="thumbnails-container">
+            <div class="thumbnail active-thumbnail">
+              <img src="./assets/images/image-product-1-thumbnail.jpg" alt="" />
+            </div>
+            <div class="thumbnail">
+              <img src="./assets/images/image-product-2-thumbnail.jpg" alt="" />
+            </div>
+            <div class="thumbnail">
+              <img src="./assets/images/image-product-3-thumbnail.jpg" alt="" />
+            </div>
+            <div class="thumbnail">
+              <img src="./assets/images/image-product-4-thumbnail.jpg" alt="" />
+            </div>
           </div>
         </div>
+
         <div class="product-details">
-          <div class="product-name">
+          <div class="product-title">
             <p class="product-brand">Sneaker Company</p>
-            <p class="product-title">Fall Limited Edition Sneakers</p>
+            <p class="product-name">Fall limited edition sneakers</p>
           </div>
           <p class="product-description">
             These low-profile sneakers are your perfect casual wear companion.
@@ -160,60 +201,35 @@
             the weather can offer.
           </p>
           <div class="product-price">
-            <div class="product-new-price">
-              <p>$125.00</p>
-              <span class="product-discount-price">50%</span>
+            <div class="discounted-price">
+              <p class="new-price">&dollar;125.00</p>
+              <span class="discount-badge">50%</span>
             </div>
-            <p class="product-old-price">$250.00</p>
+            <p class="old-price">&dollar;250.00</p>
           </div>
           <div class="product-actions">
-            <div class="product-quantity">
-              <button class="quantity-minus">
+            <div class="actions-quantity">
+              <button class="quantity-button minus">
                 <img src="./assets/images/icon-minus.svg" alt="" />
               </button>
-              <input
-                type="number"
-                name="quantity"
-                id="product-quantity"
-                min="0"
-                max="10"
-                value="0"
-                step="1"
-              />
-              <button class="quantity-plus">
+              <p class="quantity">0</p>
+              <button class="quantity-button plus">
                 <img src="./assets/images/icon-plus.svg" alt="" />
               </button>
             </div>
-            <button class="product-button btn">
+            <button class="actions-cta">
               <img src="./assets/images/icon-cart.svg" alt="" />
-              <p>Add to Cart</p>
+              Add to cart
             </button>
           </div>
         </div>
       </section>
     </main>
 
-    <script>
-      const openMenu = document.getElementById("open-menu");
-      const closeMenu = document.getElementById("close-menu");
-      const navMobile = document.getElementById("nav-mobile");
-
-      openMenu.addEventListener("click", () => {
-        navMobile.showModal();
-        openMenu.setAttribute("aria-expanded", true);
-      });
-
-      closeMenu.addEventListener("click", () => {
-        navMobile.close();
-        openMenu.setAttribute("aria-expanded", false);
-      });
-
-      navMobile.addEventListener("click", (event) => {
-        if (event.target === navMobile) {
-          navMobile.close();
-          openMenu.setAttribute("aria-expanded", false);
-        }
-      });
-    </script>
+    <script src="./assets/scripts/navMenu.js"></script>
+    <script src="./assets/scripts/galleryMobile.js"></script>
+    <script src="./assets/scripts/galleryDesktop.js"></script>
+    <script src="./assets/scripts/cart.js"></script>
+    <script src="./assets//scripts/lightbox.js"></script>
   </body>
 </html>
