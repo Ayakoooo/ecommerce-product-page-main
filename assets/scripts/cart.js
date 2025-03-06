@@ -6,13 +6,13 @@ const cartBody = document.querySelector(".cart-body");
 const cartCheckout = document.querySelector(".cart-checkout");
 const newPrice = document.querySelector(".new-price");
 
-let quantity = 0;
+let quantity = 1;
 let cartIndex = 0;
 let standardPrice = 125;
 
 function updateQuantity() {
   if (this.classList.contains("minus")) {
-    quantity = Math.max(0, quantity - 1);
+    quantity = Math.max(1, quantity - 1);
   } else {
     quantity = quantity >= 5 ? 5 : quantity + 1;
   }
@@ -30,17 +30,14 @@ function emptyCart() {
   cartBody.classList.add("empty");
   cartBody.innerHTML = `<p>Your cart is empty</p>`;
 
-  quantity = 0;
+  quantity = 1;
   quantityValue.textContent = quantity;
 }
 
 function updateCart() {
-  if (quantity == 0) {
-    emptyCart();
-  } else {
-    newPrice.textContent = `$${(standardPrice * quantity).toFixed(2)}`;
-    cartBody.classList.remove("empty");
-    cartBody.innerHTML = `
+  newPrice.textContent = `$${(standardPrice * quantity).toFixed(2)}`;
+  cartBody.classList.remove("empty");
+  cartBody.innerHTML = `
         <div class="cart-item">
             <img
               src="./assets/images/image-product-1-thumbnail.jpg"
@@ -71,12 +68,9 @@ function updateCart() {
             <button class="button-checkout btn">Checkout</button>
           </div>
     `;
-    const removeBtn = document.querySelector(".cart-remove");
-    removeBtn.addEventListener("click", emptyCart);
-  }
+  const removeBtn = document.querySelector(".cart-remove");
+  removeBtn.addEventListener("click", emptyCart);
 }
-
-updateCart();
 
 minusBtn.addEventListener("click", updateQuantity);
 plusBtn.addEventListener("click", updateQuantity);
