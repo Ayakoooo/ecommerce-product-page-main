@@ -31,6 +31,7 @@ function emptyCart() {
   cartBody.innerHTML = `<p>Your cart is empty</p>`;
 
   quantity = 1;
+  newPrice.textContent = `$125.00`;
   quantityValue.textContent = quantity;
 }
 
